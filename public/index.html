@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Check Current Weather Conditions</title>
+    <meta name="description" content="Get real-time weather information for your city. Check temperature, humidity, wind speed, and more.">
+    <!-- tailwind -->
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- float -->
+    <link href="https://cdn.jsdelivr.net/npm/flat-icons@1.0.0/creative.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container mx-auto h-screen  flex justify-around items-center">
+        <div class="shadow-md max-w-sm bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 ">
+            <form class="px-3 py-3">   
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white " aria-placeholder="Enter ">Search for ur city</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <!-- search bar and button  -->
+                    <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for ur city" required>
+                    <button type="submit" id="click-button" class="text-white absolute right-2.5 bottom-2.5 bg-fuchsia-800 hover:bg-fuchsia-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                </div>
+            </form>
+            <a href="#">
+                <img class="rounded-t-lg" src="./scr/FestimReci.png" alt="" />
+            </a>
+            <div class="p-5">
+                <!-- text for icon and descripton -->
+                <p  class="font-bold text-white text-2xl md:text-lg">
+                    <i  class="weather-for-all fi text-white "></i> 
+                    <span id="weather_d"> </span> 
+                </p>
+                <!-- temp show -->
+                <h5 id="temp" maxlength class="temp text-center	 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> </h5>
+                <!-- city show -->
+                <h5 id="city" class="city text-center	 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> </h5>
+                <div class="flex justify-around">
+                    <div class="order-first">
+                        <!-- wind show -->
+                        <p class="wind text-2xl text-white font-bold "><i class="fi text-white	 fi-rr-wind"></i><span id="wind"> </span> </p>
+                        <p class="text-2xl text-white font-bold">Wind Speed</p>
+                    </div>
+                    <div class="order-last">
+                        <!-- Humidity  -->
+                        <p class="humidity text-2xl text-white font-bold "><i class="fi text-white	 fi-bs-humidity"></i> <span  id="humidity"> </span></p>
+                        <p class="text-2xl text-white font-bold">Humidity </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- script -->
+    <script src="./js/weather.js"></script>
+</body>
+</html>

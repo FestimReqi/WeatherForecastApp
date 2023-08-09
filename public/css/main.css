@@ -1,0 +1,15 @@
+@import url(../../node_modules/@flaticon/flaticon-uicons/css/all/all.css);
+
+body{
+    background-color: #03001C;
+}
+
+
+.container{
+    height: 50rem;
+}
+
+/* 
+.fi-rr-cloud-sun , .fi-rr-wind , .fi-bs-humidity{
+    font-size: 2vw;
+} */
